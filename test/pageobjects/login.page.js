@@ -7,12 +7,14 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('[id="user-name"]') }
-    //get languageDropdown () { return $('[name="language"]') }
-    //get languageSelection () { return $('[class="mat-option ng-tns-c24-1 ng-star-inserted"]') }
-    //get nextButton () {return $('[aria-label="LOGIN"]') }
-    get inputPassword () { return $('[id="password"]') }
-    get btnSubmit () { return $('[id="login-button"]') }
+    get inputUsername () { return $('#user-name') }
+    //get inputUsername () { return $('[id="user-name"]') }
+    
+    get inputPassword () { return $('#password') }
+    //get inputPassword () { return $('[id="password"]') }
+    
+    get btnSubmit () { return $('#login-button') }
+    //get btnSubmit () { return $('[id="login-button"]') }
 
     /**
      * a method to encapsule automation code to interact with the page
