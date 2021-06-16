@@ -1,0 +1,1 @@
+const productPage = require('../pageobjects/product.list.page');
