@@ -19,6 +19,9 @@ describe('My Login application', () => {
         await productPage.GetTextForChild;
         //await productPage.GetTextForChild(1).click();
     });
+    it('try again', async()=>{
+        await productPage.tryAgain;
+    });
 });
 
 
