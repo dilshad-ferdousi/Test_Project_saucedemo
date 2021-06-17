@@ -9,20 +9,31 @@ class ProductPage extends Page {
      */
     get title () { return $('span.title')};
     get productItemParent () { return $('[class="inventory_list"]')};
-    get productClieldElement () {return this.productItemParent.$$('[class="inventory_item"]')};
+    //get productClieldElement () {return this.productItemParent().$$('[class="inventory_item"]')};
+
+    //get productItemsList () { return $$('[class="inventory_item eye-protector-processed"]')}
 
     get pIP () {return $$('[class="inventory_item"]')};
     get socialNetworkIcon () { return $('ul[class="social"] li[class="social_twitter"]')};
     get addToCartbutton() { return $$('[class="btn btn_primary btn_small btn_inventory"]')}
 
 
-    async GetTextForChild(){
+    get element () { return $$('//button[text()="Add to cart"]')[1] };
+
+    async GetTextForChild (){
         
-        //return this.productClieldElement[number];
-        return this.productClieldElement.filter(Element =>{
-          //console.log(Element.getText());
-          Element.click();
-        });
+        // //return this.productClieldElement[number];
+
+        // return this.productClieldElement.filter(Element =>{
+        //   //console.log(Element.getText());
+
+        //   Element.click();
+        // });
+        
+        //var  element = $$('//button[text()="Add to cart"]')[0];
+        await this.element.click();
+        
+     
     }
 
     async tryAgain (){

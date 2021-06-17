@@ -16,8 +16,8 @@ describe('My Login application', () => {
     });
     it('click on an Item to go to details page', async() =>{
         
-        await productPage.GetTextForChild;
-        //await productPage.GetTextForChild(1).click();
+        //await productPage.GetTextForChild;
+        await productPage.GetTextForChild();
     });
     it('try again', async()=>{
         await productPage.tryAgain;
